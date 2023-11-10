@@ -1,0 +1,125 @@
+<!-- Add this line to include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<div class="container">
+  <div class="card mt-4">
+    <div class="card-header">
+      <h1>Add New Etudiant</h1>
+    </div>
+    <div class="card-body">
+      <form class="form-inline" (ngSubmit)="addEtudiant()">
+        <div class="form-group mr-2">
+          <label for="prenomE">Prénom:</label>
+          <input type="text" class="form-control" id="prenomE" [(ngModel)]="newEtudiant.prenomE" name="prenomE"
+                 required>
+        </div>
+
+        <div class="form-group mr-2">
+          <label for="nomE">Nom:</label>
+          <input type="text" class="form-control" id="nomE" [(ngModel)]="newEtudiant.nomE" name="nomE" required>
+        </div>
+
+        <div class="form-group mr-2">
+          <label for="op">Option:</label>
+          <select class="form-control" id="op" [(ngModel)]="newEtudiant.op" name="op" required>
+            <option value="GAMIX">GAMIX</option>
+            <option value="SE">SE</option>
+            <option value="SAE">SAE</option>
+            <option value="INFINI">INFINI</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Etudiant</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <h1>All Etudiants</h1>
+
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Option</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let etudiant of etudiants">
+      <td>{{ etudiant.prenomE }}</td>
+      <td>{{ etudiant.nomE }}</td>
+      <td>{{ etudiant.op }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!--
+// Add
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content p-4">
+    <div class="modal-header">
+      <h5 class="modal-title">Ajouter un étudiant</h5>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="prenom" class="form-label">Prénom</label>
+          <input [(ngModel)]="newEtudiant.prenomE" type="text" class="form-control" id="prenom">
+        </div>
+
+        <div class="mb-3">
+          <label for="nom" class="form-label">Nom</label>
+          <input [(ngModel)]="newEtudiant.nomE" type="text" class="form-control" id="nom">
+        </div>
+
+        <div class="mb-3">
+          <label for="op" class="form-label">Option</label>
+          <select id="op" [(ngModel)]="newEtudiant.op" name="op" class="form-select" required>
+            <option value="GAMIX">GAMIX</option>
+            <option value="SE">SE</option>
+            <option value="SAE">SAE</option>
+            <option value="INFINI">INFINI</option>
+          </select>
+        </div>
+
+        <div class="modal-footer">
+          <button (click)="addEtudiant()" class="btn btn-primary">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+// List
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content p-4">
+    <div class="modal-header">
+      <h5 class="modal-title">List des étudiants</h5>
+    </div>
+    <div class="modal-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="table-light">
+          <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Option</th>
+          </tr>
+          </thead>
+          <tbody *ngFor="let etudiant of etudiants">
+          <tr>
+            <td>{{ etudiant.prenomE}}</td>
+            <td>{{ etudiant.nomE}}</td>
+            <td>{{ etudiant.op}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+-->

@@ -1,0 +1,41 @@
+/* etudiant.component.css */
+
+/* Add some margin and padding to the form */
+form {
+  margin-bottom: 20px;
+}
+
+/* Style the form labels */
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Add some margin to the button */
+button {
+  margin-left: 50px;
+}
+
+/* Style the list of etudiants */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style each etudiant item in the list */
+li {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+}
+/* etudiant.component.css */
+
+
